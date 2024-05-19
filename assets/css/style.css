@@ -194,6 +194,10 @@ body {
 
 
 
+.phone i {
+    font-size: 112%;
+}
+
 .phone i:hover {
     color: #19a3e9;
 }
