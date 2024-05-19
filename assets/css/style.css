@@ -194,6 +194,10 @@ body {
 
 
 
+.phone i:hover {
+    color: #19a3e9;
+}
+
 .whatsaap i:hover {
     color: #00ca4a;
 }
