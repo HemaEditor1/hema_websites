@@ -1,50 +1,28 @@
-:root {
-
-    /* COLOR */
-    --color-prim: white;
-    --color-sec: #4f6de4;
-    --color-thrd: #33aaff;
-    --color-bkj1: var(--color-prim);
-    --color-bkj2: var(--color-sec);
-
-
-    /* SIZE */
-    --size-prim: 15px;
-    --margin-prim: var(--size-prim);
-    --padding-prim: var(--size-prim);
-
-
-    /* FONT */
-    --font-prim: "Roboto", sans-serif;
-    --font-bold: 550;
-    --font-light: 350;
-    --font-title: 30px;
-    --font-text: 22px;
-
-}
-
-
 body {
-    font-family: var(--font-prim);
-    background: url(../imgs/Background.jpg) no-repeat;
-    background-size: 110% 350%;
+    background: url(../imgs/PcSize.jpg) no-repeat center center;
+    background-attachment: fixed;
+    font-family: "Roboto", sans-serif;
+    background-size: cover;
     background-position: center;
-    flex-direction: column;
     display: flex;
-    align-items: center;
     justify-content: center;
-    z-index: 999;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    flex-direction: column;
     text-decoration: none;
-    color: var(--color-prim);
+    z-index: 999;
+    color: white;
+    overflow-x: hidden;
 }
 
 .photo {
     width: auto;
-    height: 25vh;
+    height: 30vh;
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: -20px;
+    margin-top: -2vh;
 }
 
 .photo img {
@@ -54,25 +32,28 @@ body {
     border: 2px solid #fff;
 }
 
-.name {
+.content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: -6.5vh;
-    color: var(--color-prim);
+}
+
+.name {
+    color: white;
+    margin-top: -7.8vh;
 }
 
 .name h1 {
     text-transform: uppercase;
-    font-size: calc(var(--font-title)*.9);
+    font-size: 2rem;
 }
 
 .name h3 {
-    margin-top: -2.1vh;
-    font-size: var(--font-text);
-    font-weight: var(--font-light);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: -2vh;
 }
-
 
 .buttms {
     display: flex;
@@ -80,19 +61,22 @@ body {
 }
 
 .buttms a {
-    background-color: var(--color-bkj1);
-    margin: calc(var(--margin-prim)*1.2);
-    padding: calc(var(--padding-prim)*1.5);
-    width: 60vh;
-    height: 2.2vh;
-    margin-top: -1vh;
-    align-items: center;
     display: flex;
-    text-decoration: none;
+    background-color: white;
+    margin: 1vh;
+    padding: 2vh;
+    width: 40vw;
+    height: 3vh;
     justify-content: space-between;
-    font-size: var(--font-text);
-    font-weight: var(--font-bold);
-    transition: .2s ease;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 550;
+    transition: 0.2s ease;
+}
+
+.buttms a:hover {
+  box-shadow: 5px 8px 20px rgba(0,0,0,0.3); /* ظل عند الـ hover */
 }
 
 .behance a {
@@ -115,62 +99,91 @@ body {
     color: #e01919;
 }
 
-
 .behance a:hover {
-    color: var(--color-prim);
-    /* background-color: var(--color-bkj2); */
+    color: white;
     background: url(../imgs/bkj-btn1.jpg) no-repeat;
     background-size: 110% 500%;
     background-position: center;
 }
 
 .linkedin a:hover {
-    color: var(--color-prim);
-    /* background-color: var(--color-bkj2); */
+    color: white;
     background: url(../imgs/bkj-btn4.jpg) no-repeat;
     background-size: 110% 500%;
     background-position: center;
 }
 
 .instagram a:hover {
-    color: var(--color-prim);
-    /* background-color: var(--color-bkj2); */
+    color: white;
     background: url(../imgs/bkj-btn2.jpg) no-repeat;
     background-size: 110% 500%;
     background-position: center;
 }
 
 .facebook a:hover {
-    color: var(--color-prim);
-    /* background-color: var(--color-bkj2); */
+    color: white;
     background: url(../imgs/bkj-btn3.jpg) no-repeat;
     background-size: 110% 500%;
     background-position: center;
 }
 
 .youtube a:hover {
-    color: var(--color-prim);
-    /* background-color: var(--color-bkj2); */
+    color: white;
     background: url(../imgs/bkj-btn5.jpg) no-repeat;
     background-size: 110% 500%;
     background-position: center;
 }
 
-
-
-
-.buttms a>i {
-    display: flex;
-    align-self: center;
+.buttms a i {
+    font-size: 1.8rem;
 }
 
-.buttms a>.sml-icon {
-    font-size: 1.5vh;
+.buttms a i.sml-icon {
+    font-size: 1rem;
+    margin-left: 1vw;
 }
 
-.buttms a>.big-icon {
-    font-size: 2.5vh;
+.azkarSite a {
+    color: #2e5146;
+    font-size: 1rem;
+    font-weight: 550;
 }
+
+.azkarSite img {
+    width: 2vw;
+    height: 3vh;
+    object-fit: contain; /* يحافظ على الأبعاد */
+}
+
+.azkarSite a:hover {
+    color: white;
+    background: url(../imgs/AzkarWebsite/background.png) no-repeat;
+    background-size: 110% 500%;
+    background-position: center;
+}
+
+
+.sendMessageSite a {
+    color: #203a32;
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+.sendMessageSite a:hover {
+    color: white;
+    background: url(../imgs/SendMessage/background.png) no-repeat;
+    background-size: 110% 500%;
+    background-position: center;
+}
+
+
+.sendMessageSite img {
+    width: 2vw;
+    height: 3vh;
+    object-fit: contain; /* يحافظ على الأبعاد */
+}
+
+
 
 .social-icons a {
     margin: 2vh;
@@ -182,17 +195,16 @@ body {
 }
 
 .social-icons i {
+    margin-top: 1vh;
     font-size: 3vh;
     text-decoration: none;
-    color: var(--color-bkj1);
+    color: white;
     transition: .1s ease;
 }
 
 .social-icons i:hover {
     transform: scale(1.3);
 }
-
-
 
 .phone i:hover {
     color: #19a3e9;
@@ -225,70 +237,90 @@ body {
 
 
 
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
 footer {
     box-shadow: 0 -5px 55px rgba(1 1 1 / 18%);
-    color: var(--color-prim);
+    background: url(../imgs/PcSize.jpg) no-repeat center center;
     width: 100%;
-    position: fixed;
     bottom: 0;
     text-align: center;
-    font-size: calc(var(--size-prim)*1.1);
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 10vh;
 }
 
 footer a {
-    color: var(--color-prim);
+    color: white;
     text-decoration: none;
     transition: .2s ease;
+    letter-spacing: -0.2px;
 }
-
 
 footer a:hover {
     text-decoration: underline;
 }
 
+.copyRights {
+    margin-top: -1vh;
+}
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
+body {
+    background: url(../imgs/PhoneSize.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
-    body {
-        margin-top: 1vh;
-        margin-bottom: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0;
-        background-size: 150% 200%;
-        background-attachment: fixed;
-    }
+.name h1 {
+    font-size: 1.5rem;
+}
 
-    .photo {
-        margin-top: -30px;
-    }
+.name h3 {
+    margin-top: -2.5vh;
+}
 
-    .name h1 {
-        font-size: 1.3rem
-    }
-    
-    .name h3 {
-        font-size: 1rem
-    }
-    
+.buttms a {
+    width: 70vw;
+    height: 4vh;
+}
 
-    .buttms {
-        margin-top: .8vh;
-    }
+.buttms a i {
+    font-size: 1.3rem;
+}
 
-    .buttms a {
-        width: 38vh;
-    }
+.buttms a i.sml-icon {
+    font-size: 0.8rem;
+}
 
+.azkarSite a {
+    color: #2e5146;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
 
-    footer {
-        font-size: var(--size-prim);
-    }
+.azkarSite img {
+    width: 5.5vw;
+    height: 5vh;
+}
 
-    footer p {
-        font-size: .8rem;
-    }
+.sendMessageSite a {
+    color: #203a32;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
+
+.sendMessageSite img {
+    width: 5.5vw;
+    height: 5vh;
+}
+
+footer {
+    font-size: 0.9rem;
+}
 
 }
